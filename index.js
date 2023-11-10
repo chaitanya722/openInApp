@@ -5,16 +5,11 @@ const port = 4000;
 const app = express();
 
 
-const botFolder = "botMails";
-const SCOPES = [
-    "https://www.googleapis.com/auth/gmail.readonly",
-    "https://www.googleapis.com/auth/gmail.send",
-    "https://www.googleapis.com/auth/gmail.labels",
-    "https://mail.google.com/",
-  ];
-
-
-app.get("/", autoMailLogic);
+app.get('/', (request, response) => {
+    const filePath = path.join(__dirname, 'landingPage.html');
+    response.sendFile(filePath);
+  });
+app.get("/start", autoMailLogic);
 
 
 app.listen(port, () => {
