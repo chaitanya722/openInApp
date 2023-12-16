@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Attractive Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+        }
+
+        button {
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 24px;
+            color: #488C20;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #000
+        }
+    </style>
 </head>
-<body style="width: 100vw; display: flex;justify-content: center; align-items: center;">
-    <button onclick="startBot()" style="padding: 10px 20px ; border-radius: 10px; background-color: blueviolet ; cursor: pointer;font-size: 20px ;color: white;margin-top: 10px;">Start Bot</button>
+<body>
+    <button onclick="startBot">Click to Start</button>
 
     <script>
         function startBot() {
